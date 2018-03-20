@@ -1,0 +1,125 @@
+MySql:
+mysql -uroot -p         登陆
+show databases;         查看当前有哪些数据库
+use 数据库名            使用哪个数据库
+select database();      查看当前在使用哪个数据库
+drop database 数据库名  删除数据库
+create database 数据库名 charset=utf8;   创建数据库
+show tables;            查看当前数据库有哪些表
+create table 表名(列及类型);      创建表
+create table students(
+    -> id int auto_increment primary key not null,
+    -> name varchar(10) not null,
+    -> gender bit default 1,
+    -> birthday datatime);
+drop table 表名;          删除表
+desc 表名;                查看表结构
+rename table 原表名 to 新表名;        修改表名称
+alter table 表名 add|change|drop 列名 类型;       修改表 auto_increment表示自动增长
+如:      alter table students add birthday datetime;
+select * from 表名;     查询 select * from students where isDelete=0;
+增加:
+insert into 表名 values(...)      全列插入
+
+insert into 表名(列1，...) values(值1,...)   缺省插入
+如: insert into students(name, birthday) value('杨过', '1993-5-12');
+insert into 表名 values(...),(...)...;        同时插入多条数据
+insert into 表名(列1,...) values(值1,...),(值1,...)...;
+update students set birthday='1993-5-12' where id=5;    修改表内容
+delete from students where id=4;    删除
+mysqldump -uroot -p python3 > ~/Desktop/bak.sql     备份数据库(python3需要备份的数据库名)
+mysql -uroot -p pychar66 < bak.sql                  恢复数据库(pychar66新建的数据库名)
+
+数据库查询:
+select distinct name from students;                 distinct 消除重复
+模糊查询:
+like:
+select * from students where name like '黄_'
+%:表示任意多个字符
+_:表示一个任意字符
+in 非连续范围 in(2,3,8)
+between ... and ... 表示在一个连续的范围内 between 3 and 8
+
+优先级:
+小括号，not，比较运算符，逻辑运算符
+and比or先运算，如果同时出现并希望or先运算，需结合()使用
+
+聚合函数:
+count()         求和（有一行算一个,多少列）
+select count(*) from students;
+max()           求最大值
+min()           求最小值
+avg()           求平均值
+sum()           求和（值相加）
+select sum(id) from students where gender=1;
+
+select count(*),gender from students group by gender;   分组查询
+select count(*) as rs,gender from students group by gender having rs>2;     查询
+
+排序:
+select * from 表名 order by 列1 asc|desc，列2 asc|desc,...
+select * from students where gender=1 and isDelete=0 order by id desc
+
+获取部分行:
+分页:
+select * from 表名 limit start,count  从start开始，获取count条数据  start索引从0开始
+select * from students limit 1,2;
+求第n页的数据:
+select * from students where isDelete=0 limit (n-1)*m,m;
+
+
+外键:
+create tables scores(
+id int primary key auto_increment not null,
+score decimal(5,2),
+stuid int not null,
+subid int not null,
+foreign key(stuid) references students(id),
+foreign key(subid) references subjects(id)
+);
+链接查询:
+select students.name,subjects.stitle,scores.score
+from scores
+inner join students on scores.stuid=students.id
+inner join subjects on scores.subid=subjects.id;
+
+source bak.sql      导入数据库
+
+视图:
+create view v_1 as 
+select stu.*,sco.score,sub.titless from scores as sco
+inner join students as stu on sco.stuid=stu.id
+inner join subjects as sub on sco.subid=sub.id;
+
+通过视图查询:
+select *from v_1;
+
+修改视图:
+alter view v_1 as
+select stu.*,sco.score,sub.titless from scores as sco
+inner join students as stu on sco.stuid=stu.id
+inner join subjects as sub on sco.subid=sub.id
+where stu.isDelete=0 and sub.isDelete=0;
+
+
+事物:
+begin:
+对表的一些修改操作       实际是对内存级的临时表操作
+commit;     提交更改到表
+rollback;   回滚
+
+
+
+MySql与python连接:
+Ubuntu安装:sudo apt-get install python-mysqldb
+
+
+
+
+
+
+
+
+
+
+

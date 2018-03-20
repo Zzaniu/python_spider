@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>曾文君.Write</title>
+</head>
+<!--<html>:定义 HTML 文档
+    <body>:定义文档的主体
+    <h1> - <h6>:定义 HTML 标题
+    <hr>:定义水平线s
+-->
+    <style type="text/css">
+
+        a{
+            text-decoration:none;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+
+        /*h1, h2, h3{
+            background:green;
+            width:100px;
+            align:center;
+        }*/
+        .box1,.box2,.box3{
+            background:black;
+            width:100px;
+            text-align:center;
+            margin:auto;
+        }
+
+        .box1{
+            color:red;
+        }
+        .box2{
+            color:pink;
+        }
+        .box3{
+            color:green;
+        }
+
+        .list{
+            list-style:none;
+            text-align: center;
+        }
+
+        .list h3:hover{
+            color: red;
+        }
+
+
+    </style>
+<body>
+
+    <a target="_blank" href="http://www.baidu.com" title="链接到百度">百度一下</a>
+    <br />
+    <ul class="list">
+        <li><h1 class="box1">标题1</h1></li>
+        <li><h2 id="mao1" class="box2">标题2</h2></li>
+        <li><h3 class="box3">标题3</h3></li>
+    </ul>
+    <br />
+    <table border="0" width="500" height="200" cellpadding="0" cellspacing="0" align="center">
+        <tr>
+            <td valign="top" align="center">
+                <img src="images/IMG_20170624_230829.jpg" alt="KK图片">
+            </td>
+        </tr>
+        <tr>
+            <td height="230" valign="top" align="center">
+                <img src="images/p3.gif" alt="p3.gif图片">
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <a href="#mao1">跳转到标题2</a>
+    <br />
+    <br />
+    <br />
+    <a href="#">跳转到顶部</a>
+    
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+"//tbody/tr/th[@class="subject new"]/font    被顶多少次
+//tbody/tr/th[@class="subject new"]/span[@id="thread_234954"]/a/@href  链接
+//tbody/tr/th/span/a/@href    链接
+
+
+//tbody/tr/th[@class="subject new"]/span/@id                                    取tbody得id
+//tbody/tr/th[@class="subject common"]/span/@id                                 取tbody得id
+//tbody/tr/th[@class="subject new" | @class="subject common"]/span/@id          取tbody得id
+//tbody/tr/th[contains(@class, "subject")]/span/@id                             取tbody得id
+
+//tbody[@id="normalthread_256051"]/tr/th[@class="subject new"]/span/a/@href     链接
+
+//tbody[@id="normalthread_256051"]/tr/th[@class="subject new"]/font             被顶
+
+
+
+//div[@class="postmessage firstpost"]//td/img/@src                              图片
+
+
+
+//div/h1/text()             房间名
+
+//table/tbody[contains(@id, "normalthread_")]
+
+//table/tbody[contains(@id, "normalthread_")]//span[@id="thread_255368"]/a/@href   链接
+//table/tbody[contains(@id, "normalthread_")]//font                                被顶
+
+
+
+name = scrapy.Field()
+ding = scrapy.Field()
+htmllink = scrapy.Field()
+imagelink = scrapy.Field()
+imagepath = scrapy.Field()
+image = scrapy.Field()
+
+
+
+# 职位名称
+positionname = scrapy.Field()
+# 详情链接
+positionlink = scrapy.Field()
+# 职位类别
+positiontype = scrapy.Field()
+# 招聘人数
+peoplenum = scrapy.Field()
+# 工作地点
+worklocation = scrapy.Field()
+# 发布时间
+publishtime = scrapy.Field()
+
+
+def __init__(self):
+    self.filename = open("Tencent.json", "w")
+def process_item(self, item, spider):
+ text = json.dumps(dict(item), ensure_ascii = False).encode("utf-8") + '\n'
+ self.filename.write(text)
+ return item
+
+def close_spider(self, spider):
+ self.filename.close()
+
+
+PIC32实现按键通讯，MFC编写XP下接收端软件。按键程序比较简单，采用矩阵按键，实现按键长按短按，任意两键同时按下无冲突，按键按下通过串口发送相应消息给上位机，上位机判断消息是否正确，然后进行相应的处理，在界面模拟按键按下。
+ 
+
+
+
+
+
+
+
+872109191
+c8e18a2bf5fc9b1b4ce3113dde4699fc
+
+
+
+
+https://weibo.com/u/2864930210/home?wvr=5
+https://weibo.com/2864930210/follow?rightmod=1&wvr=6
+/2864930210/follow?rightmod=1&wvr=6
+
+https://weibo.com/aj/mblog/fsearch?ajwvr=6&pre_page=1&page=1&end_id=1516090968509985&min_id=4196706926526874&pagebar=1&unread_max_id=1516090968509970&unread_since_id=1516090968509970&__rnd=1516090985405
+https://weibo.com/aj/mblog/fsearch?ajwvr=6&pre_page=1&page=1&end_id=1516090968509985&min_id=4196687830056799&pagebar=3&unread_max_id=1516090968509940&unread_since_id=1516090968509940&__rnd=1516091535458
+
+
+
+url = "https://passport.weibo.cn/signin/login"
+
+
+data = {
+    "username":"451620411@qq.com",
+    "password":"!zaniuai93*",
+    "savestate" : "1",
+    "r" : "",
+    "ec" : "0",
+    "pagerefer" : "",
+    "entry" : "mweibo",
+    "wentry" : "",
+    "loginfrom" : "",
+    "client_id" : "",
+    "code" : "",
+    "qq" : "",
+    "mainpageflag" : "1",
+    "hff" : "",
+    "hfp" : ""
+}
+
+data = {
+    "username" : "451620411@qq.com",
+    "password" : "!zaniuai93*",
+    "savestate" : "1",
+    "r" : "http://m.weibo.cn/?jumpfrom=wapv4&tip=1",
+    "ec" : "1",
+    "pagerefer" : "",
+    "entry" : "mweibo",
+    "wentry" : "",
+    "loginfrom" : "",
+    "client_id" : "",
+    "code" : "",
+    "qq" : "",
+    "mainpageflag" : "1",
+    "hff" : "",
+    "hfp" : "",
+}
+
+
+
+https://m.jd.com/           京东
+https://passport.weibo.cn/signin/login?entry=mweibo&res=wel&wm=3349&r=http%3A%2F%2Fm.weibo.cn%2F%3Fjumpfrom%3Dwapv4%26tip%3D1       新浪微博
+
+
+https://wqs.jd.com/order/orderlist_merge.shtml?tab=1&sceneval=2&ufc=d5a1055873374909215e77e8060021dc&sid=dcc4864a0a5f053ce3b612c4a5e7837a
+
+
+
+
+https://passport.weibo.cn/sso/login        微博post
+https://login.sina.com.cn/signup/signin.php
+
+
+username    451620411@qq.com
+password    wenjunai93
+savestate   1
+r   http://m.weibo.cn/?jumpfrom=wapv4&tip=1
+ec  0
+pagerefer   
+entry   mweibo
+wentry  
+loginfrom   
+client_id   
+code    
+qq  
+mainpageflag    1
+hff 
+hfp 
+
+
+
+https://sclub.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98vv49353&productId=5001175&score=0&sortType=5&page=7&pageSize=10&isShadowSku=0&rid=0&fold=1
+
+https://sclub.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98vv49353&productId=5001175&score=0&sortType=5&page=9&pageSize=10&isShadowSku=0&rid=0&fold=1
+
+
+
+

@@ -1,0 +1,108 @@
+#可重复使用绑定的信息
+server.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+飞秋自己的协议：1:12313213213:user:PC_Name:32:发送数据，端口号2425
+icmp:ping一台电脑
+arp:获取一个电脑上的网卡号，就是mac地址
+
+开发效率高。python有很多库很方便做人工智能，比如numpy, scipy做数值计算的，sklearn做机器学习的，pybrain做神经网络的，matplotlib将数据可视化的
+
+decode(解码)的作用是将其他编码的字符串转换成unicode编码，如str1.decode('gb2312')，表示将gb2312编码的字符串str1转换成unicode编码。 
+encode(编码)的作用是将unicode编码转换成其他编码的字符串，如str2.encode('gb2312')，表示将unicode编码的字符串str2转换成gb2312编码。 
+
+类就是创建对象的模板
+
+数字、字符串、元组：不可变类型。不可变类型可当字典关键字
+
+eval（）：去掉双引号
+
+第八天/文件
+
+import sys
+
+sys.path.append("../")   然后再导入就OK了
+
+重新加载（模块被修改后不需要退出直接reload就OK啦）
+from imp import *
+reload(模块)
+
+== 判断值是不是相等  is判断是不是指向同一个东西
+a = [1,2,3]
+b = a
+a == b
+True
+a is b
+True
+
+a = [1,2,3]
+b = [1,2,3]
+a == b
+True
+a is b
+Flase
+
+深拷贝、浅拷贝
+1. copy.copy 浅拷贝 只拷贝父对象，不会拷贝对象的内部的子对象。
+2. copy.deepcopy 深拷贝 拷贝对象及其子对象
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] #原始对象
+b = a #赋值，传对象的引用
+c = copy.copy(a) #对象拷贝，浅拷贝
+d = copy.deepcopy(a) #对象拷贝，深拷贝
+a.append(5) #修改对象a
+a[4].append('c') #修改对象a中的['a', 'b']数组对象
+print 'a = ', a
+print 'b = ', b
+print 'c = ', c
+print 'd = ', d
+输出结果：
+a =  [1, 2, 3, 4, ['a', 'b', 'c'], 5]
+b =  [1, 2, 3, 4, ['a', 'b', 'c'], 5]
+c =  [1, 2, 3, 4, ['a', 'b', 'c']]
+d =  [1, 2, 3, 4, ['a', 'b']]
+
+^按位异或：不相同为1
+
+取反是对补码进行取反。负数的源码 = 补码符号位不变，其他为取反，得到的结果+1 
+class Test(object):
+    def __init__(self):
+        self.__num = 50
+
+    def setNum(self, newNum):
+        self.__num = newNum
+
+    def getNum(self):
+        return self.__num
+
+    num = property（getNum, setNum）
+
+
+t = Test()
+t.num = 200 (就相当于t.setNum(200))
+print(t.num) (就相当于print(t.getNum()))
+
+迭代器：可用next()取值的。生成器一定是迭代器的对象。列表不是可迭代对象，但是可以迭代
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

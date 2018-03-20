@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>绝对定位</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+    .con{
+        border: 1px solid #333;
+        width: 500px;
+        height: 500px;
+        margin: 100px auto 0;
+        position:relative;
+    }
+
+    .con div{
+        width: 200px;
+        height: 100px;
+        background-color: gold;
+        margin: 20px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 100px;
+    }
+
+    body .box1{
+        position:absolute;
+        left:50px;
+        top: 50px;
+        background-color: green;
+    }
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="con">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>

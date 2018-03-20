@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>浮动</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+    .con,.con2{
+        width: 500px;
+        font-size: 0;
+        border: 1px solid #000;
+        margin: 100px auto 0;
+    }
+
+    .con a{
+        font-size: 16px;
+        background-color: gold;
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        line-height: 100px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /*.con2{
+        overflow: hidden;
+    }*/
+
+    .con2 a{
+        font-size: 16px;
+        background-color: gold;
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        float: left;
+        line-height: 100px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /*.clearfix:after{
+        content: "";
+        display: table;
+        clear: both;
+    }*/
+
+    .clearfix:after,.clearfix:before{
+        content: "";
+        display: table;
+    }
+    .clearfix:after{
+        clear: both;
+    }
+    .clearfix{
+        zoom:1;
+    }
+
+</style>
+</head>
+<body>
+    <div class="con">
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">6</a>
+        <a href="">7</a>
+        <a href="">8</a>
+    </div>
+
+    <div class="con2 clearfix">
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">6</a>
+        <a href="">7</a>
+        <a href="">8</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>表单</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="CSS/main.css" rel="stylesheet">
+</head>
+<body>
+    <h3>用户注册</h3>
+    <form action="http://www.baidu.com" method="post">
+        <div>
+            <label for="username">用户名:</label>
+            <input type="text" name="username" id="user">
+        </div>
+        <br />
+        <div>
+            <label for="pwd">密码:</label>
+            <input type="password" name="pwd" id="pwd">
+        </div>
+        <br />
+        <div>
+            <label>性别:</label>
+            <input type="radio" name="gender" id="male" value="0"> <label for="male">男</label>
+            <input type="radio" name="gender" id="female" value="1"> <label for="female">女</label>
+        </div>
+        <br />
+        <div>
+            <label>爱好:</label>
+            <input type="checkbox" name="like" value="game"> 游戏
+            <input type="checkbox" name="like" value="basketnball"> 篮球
+        </div>
+        <br />
+        <div>
+            <label>照片:</label>
+            <input type="file" name="">
+        </div>
+        <br />
+        <div>
+            <label>个人描述:</label>
+            <textarea name="info"></textarea>
+        </div>
+        <br />
+        <div>
+            <label>籍贯:</label>
+            <select name="site">
+                <option value=""></option>
+                <option value="长沙">长沙</option>
+                <option value="湘潭">湘潭</option>
+                <option value="株洲">株洲</option>
+                <option value="新化">新化</option>
+            </select>
+        </div>
+        <br />
+
+        <!-- hidden不显示，但是会帮我们提交数据 -->
+        <input type="hidden" name="hid" value="666">
+        <!-- 图片提交有时候会提交两次的bug -->
+        <input type="image" name="" src="images/touxiang.png">
+        <input type="submit" name="" value="提交">
+        &nbsp
+        <input type="reset" name="" value="重置">
+
+
+    </form>
+</body>
+</html>
